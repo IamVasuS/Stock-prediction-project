@@ -85,15 +85,15 @@ y_predicted = model.predict(x_test)
 scaler = scaler.scale_
 
 scale_factor = 1/scaler[0]   # BECOZ NOW OUR SCALAR IS PRESENT IN SCALAR ARRAY AT INDEX 0
-#y_predicted = y_predicted* scale_factor
-#y_test = y_test * scale_factor
+y_predicted = y_predicted* scale_factor
+y_test = y_test * scale_factor
 
 #FINAL GRAPH
 
 st.subheader('PREDICTIONS vs ORIGINAL')
 fig2 = plt.figure(figsize=(12,6))
-plt.plot(y_test, 'b', label = 'ORIGINAL PRICE')
-plt.plot(y_predicted, 'r', label = 'PREDICTED PRICE')
+plt.plot(x_test,y_test, 'b', label = 'ORIGINAL PRICE')
+plt.plot(x_test,y_predicted, 'r', label = 'PREDICTED PRICE')
 plt.xlabel('Time')
 plt.ylabel('Price')
 plt.legend()
