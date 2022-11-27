@@ -25,7 +25,7 @@ if user_input=='':
     print('Enter stock ticker')
 else:
     df = data.DataReader(user_input, 'yahoo' , start, end)
-    print df
+    print(df)
     #flag=1
 #DESCRIBING DATA
 
