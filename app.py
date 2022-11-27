@@ -85,8 +85,8 @@ y_predicted = model.predict(x_test)
 scaler = scaler.scale_
 
 scale_factor = 1/scaler[0]   # BECOZ NOW OUR SCALAR IS PRESENT IN SCALAR ARRAY AT INDEX 0
-y_predicted = y_predicted* scale_factor
-y_test = y_test * scale_factor
+#y_predicted = y_predicted* scale_factor
+#y_test = y_test * scale_factor
 
 #FINAL GRAPH
 
