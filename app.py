@@ -21,7 +21,10 @@ end = '2021-12-31'
 st.title('Stock Trend Prediction')
 
 user_input = st.text_input('Enter Stock Ticker', '')
-df = data.DataReader(user_input, 'yahoo' , start, end)
+if user_input=='':
+    print('Enter stock ticker')
+else:
+    df = data.DataReader(user_input, 'yahoo' , start, end)
 
 #DESCRIBING DATA
 
