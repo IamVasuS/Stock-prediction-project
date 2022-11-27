@@ -25,7 +25,8 @@ if user_input=='':
     print('Enter stock ticker')
 else:
     df = data.DataReader(user_input, 'yahoo' , start, end)
-
+    print df
+    #flag=1
 #DESCRIBING DATA
 
     st.subheader('Data from 2008-2021')
